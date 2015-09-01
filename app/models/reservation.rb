@@ -1,3 +1,10 @@
 class Reservation < ActiveRecord::Base
-  validates_presence_of :number, :on => :create, :message => "can't be blank"
+  #validates :mobile, phone: { possible: true, types: [:mobile] }
+  validates :name, :mobile, :start_date, :end_date,  presence: true
+  validate :valid_number
+
+
+  def valid_number
+    errors.add(:mobile, "Incorrectly formatted number") unless Phonelib.valid?(mobile) 
+  end
 end

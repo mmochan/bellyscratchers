@@ -2,7 +2,7 @@ class CreateReservations < ActiveRecord::Migration
   def change
     create_table :reservations do |t|
       t.string :name
-      t.string :number
+      t.string :mobile
       t.date :start_date
       t.date :end_date
 
