@@ -1,3 +1,22 @@
-<div class="container">
-  <h1>This is the reservations page.</h1>
-</div>
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>Name:</strong>
+  <%= @reservation.name %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @reservation.number %>
+</p>
+
+<p>
+  <strong>Start Date:</strong>
+  <%= @reservation.start_date %>
+</p>
+
+  <strong>End Date:</strong>
+  <%= @reservation.end_date %>
+</p>
+
+<%= link_to 'Edit', edit_reservation_path(@reservation), :class => "btn btn-success"%> |
+<%= link_to 'Back', reservations_path, :class => "btn btn-success" %>
