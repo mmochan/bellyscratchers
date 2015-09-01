@@ -18,7 +18,7 @@
         <%= nav_link 'Home', root_path %>     
         
         <% if user_signed_in? %>
-          <%= nav_link 'Reservations', reservations_show_path %>  
+          <%= nav_link 'Reservations', reservations_path %>  
           <%= nav_link 'My Account', edit_user_registration_path %>   
           <%= nav_link 'Logout', destroy_user_session_path, :delete %>
         <% else %>

@@ -24,5 +24,11 @@
 @import "bootswatch/cerulean/bootswatch";
 
 body {
-    padding-top: 90px;
+    padding-top: 70px;
   }
+
+.fade-in-on-load {
+    opacity: 0;
+    will-change: transition;
+    transition: opacity .09s ease-out;
+}  
