@@ -19,10 +19,7 @@
             close: 'glyphicon glyphicon-remove'
         }, }}}%>
     <%= f.input :end_date,    :as => :date_picker %>
-      <
-      <%= current_user.dogs.each do |dog| %>
-        <%= dog.name %>
-      <% end %>
+    <%= f.input :dogs,  as: :select, collection: current_user.dogs.collect{ |w| [w.name, w.id] }, class: "chosen-select", as: :check_boxes, label: "My Dogs" %>
   </div>
 </div>
 

@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20150901223951) do
   create_table "reservations", force: :cascade do |t|
     t.string   "name"
     t.string   "mobile"
+    t.text     "dogs"
     t.date     "start_date"
     t.date     "end_date"
     t.datetime "created_at", null: false

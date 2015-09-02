@@ -18,6 +18,7 @@ class DogsController < ApplicationController
 
   def create
     @dog = Dog.new(dog_params)
+    @dog.user_id = current_user.id
 
     respond_to do |format|
       if @dog.save

@@ -13,9 +13,14 @@
   <strong>Start Date:</strong>
   <%= @reservation.start_date %>
 </p>
-
+<p>
   <strong>End Date:</strong>
   <%= @reservation.end_date %>
+</p>
+
+<p>
+  <strong>Dogs:</strong>
+  <%= Dog.find_by_id(@reservation.dogs).name %>
 </p>
 
 <%= link_to 'Edit', edit_reservation_path(@reservation), :class => "btn btn-small btn-primary"%> |

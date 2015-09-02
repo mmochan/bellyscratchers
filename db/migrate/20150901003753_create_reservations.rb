@@ -3,6 +3,7 @@ class CreateReservations < ActiveRecord::Migration
     create_table :reservations do |t|
       t.string :name
       t.string :mobile
+      t.text :dogs, array: true
       t.date :start_date
       t.date :end_date
 
