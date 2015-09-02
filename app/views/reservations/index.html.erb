@@ -21,7 +21,7 @@
         <td><%= reservation.mobile %></td>
         <td><%= reservation.start_date %></td>
         <td><%= reservation.end_date %></td>
-        <td><%= Dog.find_by_id(reservation.dogs).name %></td>        
+        <td><%= reservation.dogs.map(&:name) %></td>        
         <td><%= link_to 'Show', reservation %></td>
         <td><%= link_to 'Edit', edit_reservation_path(reservation) %></td>
         <td><%= link_to 'Destroy', reservation, method: :delete, data: { confirm: 'Are you sure?' } %></td>

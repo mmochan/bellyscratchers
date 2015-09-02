@@ -20,7 +20,9 @@
 
 <p>
   <strong>Dogs:</strong>
-  <%= Dog.find_by_id(@reservation.dogs).name %>
+  <% @reservation.dogs.each do |dog|%>
+   <%= dog.name%>,
+  <%end %>
 </p>
 
 <%= link_to 'Edit', edit_reservation_path(@reservation), :class => "btn btn-small btn-primary"%> |

@@ -4,7 +4,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  has_many :reservations
   has_many :dogs
 
-  accepts_nested_attributes_for :dogs
+  accepts_nested_attributes_for :reservations
 end
