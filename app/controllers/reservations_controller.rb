@@ -23,7 +23,6 @@ class ReservationsController < ApplicationController
 
     respond_to do |format|
       if @reservation.save
-        binding.pry
         format.html { redirect_to reservations_path, notice: 'reservation was successfully created.' }
         format.json { render :show, status: :created, location: @reservation }
       else
