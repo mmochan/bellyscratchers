@@ -5,7 +5,7 @@ class Reservation < ActiveRecord::Base
 
 
   belongs_to :user
-  has_and_belongs_to_many :dogs
+  has_and_belongs_to_many :dogs, dependent: :destroy
 
   def valid_number
     errors.add(:mobile, "Incorrectly formatted number") unless Phonelib.valid?(mobile) 
