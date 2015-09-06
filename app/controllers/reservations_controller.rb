@@ -19,7 +19,7 @@ class ReservationsController < ApplicationController
 
   def create
     @reservation = current_user.reservations.build(reservation_params)
-    @reservation.dog_ids = params[:reservation][:dogs][:id]
+    @reservation.dog_ids = params[:reservation][:dog_ids]
 
     respond_to do |format|
       if @reservation.save
@@ -34,7 +34,7 @@ class ReservationsController < ApplicationController
 
   def update
     respond_to do |format|
-      @reservation.dog_ids = params[:reservation][:dogs][:id]
+      @reservation.dog_ids = params[:reservation][:dog_ids]
       if @reservation.update(reservation_params)
         format.html { redirect_to reservations_path, notice: 'reservation was successfully updated.' }
         format.json { render :index, status: :ok}
@@ -63,7 +63,7 @@ class ReservationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def reservation_params
-      params[:reservation][:dogs][:id].reject!(&:empty?)
+      params[:reservation][:dog_ids].reject!(&:empty?)
       params.require(:reservation).permit(:name, :mobile, :start_date, :end_date)
     end  
 end
