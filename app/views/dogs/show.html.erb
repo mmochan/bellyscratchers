@@ -9,6 +9,11 @@
   <%= @dog.sex %>
 </p>
 
+<p>
+  <strong>Piccy:</strong>
+  <%= image_tag(@dog.avatar ) %>
+</p>
+
 
 
 <%= link_to 'Edit', edit_dog_path(@dog), :class => "btn btn-small btn-primary"%> |
