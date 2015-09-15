@@ -4,7 +4,7 @@
 
 <div class="row form-inputs">
   <div class="row col-sm-12 col-md-8 col-lg-8">
-    <%= binding.pry;f.input :name, input_html: {value: current_user.email || '1'}%>
+    <%= f.input :name, input_html: {value: current_user.email || '1'}%>
     <%= f.input :mobile %>
     <%= f.input :start_date,  :as => :date_picker,  input_html: {data: {date_options: { defaultDate: Time.now, showClose: true,
         icons: {
