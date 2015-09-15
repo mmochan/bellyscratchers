@@ -6,6 +6,9 @@
   <div class="row col-sm-12 col-md-8 col-lg-8">
     <%= f.input :name %>
     <%= f.input :sex %>
+    <%= image_tag(@dog.avatar_url) if @dog.avatar? %>
+    <%= f.file_field :avatar %>
+    <%= f.hidden_field :avatar_cache %>
   </div>
 </div>
 

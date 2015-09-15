@@ -20,5 +20,9 @@ module ApplicationHelper
           }
     map.fetch(flash_type)          
   end
+
+  def dog_pics reservation
+    return reservation.dogs.map {|dog| dog.avatar_url :tiny}
+  end
   
 end

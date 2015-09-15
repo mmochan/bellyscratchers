@@ -1,3 +1,40 @@
 // Place all the styles related to the dogs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.thumb {
+    margin-bottom: 30px;
+}
+
+//footer {
+//  text-align: center;
+//  margin: 220px 0;
+//  color: #1995dc;
+//}
+
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  padding: 20px;
+  height: 60px;
+  //background-color: #54b4eb;
+  background-image: -webkit-linear-gradient(#54b4eb, #2FA4E7 60%, #1d9ce5);
+  background-image: linear-gradient(#54b4eb, #2FA4E7 60%, #1d9ce5);
+  background-repeat: no-repeat;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  color: #fff;
+  background-color: transparent;
+  text-align: center;
+  font-size: 14;
+  font-weight: bold;
+}

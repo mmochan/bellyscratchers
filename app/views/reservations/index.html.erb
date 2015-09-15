@@ -6,11 +6,8 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>mobile</th>
-      <th>Start Date</th>
-      <th>End Date</th>
-      <th>Dogs</th>
-      <th colspan="3"></th>
+      <th>Who's coming</th>
+      <th colspan="6"></th>
     </tr>
   </thead>
 
@@ -18,10 +15,9 @@
     <% @reservations.each do |reservation| %>
       <tr>
         <td><%= reservation.name %></td>
-        <td><%= reservation.mobile %></td>
-        <td><%= reservation.start_date %></td>
-        <td><%= reservation.end_date %></td>
-        <td><%= reservation.dogs.map(&:name) %></td>        
+        <% reservation.dogs.each do |pic| %>
+          <td><%= image_tag pic.avatar_url :tiny %></td>
+        <% end %>
         <td><%= link_to 'Show', reservation %></td>
         <td><%= link_to 'Edit', edit_reservation_path(reservation) %></td>
         <td><%= link_to 'Destroy', reservation, method: :delete, data: { confirm: 'Are you sure?' } %></td>

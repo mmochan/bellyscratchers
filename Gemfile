@@ -40,6 +40,11 @@ gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: '
 gem 'phonelib'
 gem 'carrierwave'
 
+#gem 'rmagick'
+gem 'mini_magick'
+
+gem 'omniauth-facebook'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

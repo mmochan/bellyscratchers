@@ -18,12 +18,18 @@
   </head>
 
   <body>
-    
-    <%= render partial: "shared/flash_messages", flash: flash %> 
-    <%= render 'shared/navigation_bar' %>
+  <div id="wrap">    
+      <%= render partial: "shared/flash_messages", flash: flash %> 
+      <%= render 'shared/navigation_bar' %>
 
-  <div class='container'>
-    <%= yield %>
+      <div class='container'>
+        <%= yield %>
+      </div>
+  </div>
+  <div id='footer'>
+     <div class="container">
+       <p>Copyright (c) BellyScratchers 2015</p>
+     </div>
   </div>
   
   </body>

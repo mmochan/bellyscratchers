@@ -21,7 +21,7 @@
 <p>
   <strong>Dogs:</strong>
   <% @reservation.dogs.each do |dog|%>
-   <%= dog.name%>,
+   <%= image_tag dog.avatar_url(:tiny)%>,
   <%end %>
 </p>
 

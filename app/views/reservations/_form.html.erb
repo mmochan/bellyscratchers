@@ -4,7 +4,7 @@
 
 <div class="row form-inputs">
   <div class="row col-sm-12 col-md-8 col-lg-8">
-    <%= f.input :name %>
+    <%= binding.pry;f.input :name, input_html: {value: current_user.email || '1'}%>
     <%= f.input :mobile %>
     <%= f.input :start_date,  :as => :date_picker,  input_html: {data: {date_options: { defaultDate: Time.now, showClose: true,
         icons: {
@@ -19,7 +19,17 @@
             close: 'glyphicon glyphicon-remove'
         }, }}}%>
     <%= f.input :end_date,    :as => :date_picker %>
-    <%= f.association :dogs,   as: :check_boxes %>
+
+    <div class="row">
+      <div class="col-lg-12">
+          <h1 class="page-header">Pick who's coming to stay</h1>
+      </div>
+      <div class="span12">
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+          <%= f.association :dogs, as: :check_boxes, :collection => current_user.dogs, :label => false, :label_method => lambda { |dog| image_tag"#{dog.avatar_url(:tiny)}".html_safe } %>
+        </div> 
+      </div> 
+    </div> 
   </div>
 </div>
 
